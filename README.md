@@ -1,4 +1,4 @@
-# JavaScript-
+ok# JavaScript-
 import os
 import re
 import yaml
@@ -12,12 +12,7 @@ LANG_DIR = "lang"
 TEMPLATES_DIR = "templates"
 EN_DEFAULT = "en-default"
 EN_DEFAULT_FILE = f"language-{EN_DEFAULT}.yml"
-LANGUAGE_FILE_URL = "https://github.com/Shopkeepers/Language-Files/blob/{version}/lang/language-{lang_code}.yml"
-CONTRIBUTORS_URL = "https://github.com/Shopkeepers/Language-Files/blob/{version}/CONTRIBUTORS.md"
-
-README_FILENAME = "README.md"
-README_TEMPLATE_FILE = os.path.join(REPO_ROOT, TEMPLATES_DIR, README_FILENAME)
-README_FILE = os.path.join(REPO_ROOT, README_FILENAME)
+LANGUAGE_FILE_URL = "
 
 CONTRIBUTORS_FILENAME = "CONTRIBUTORS.md"
 CONTRIBUTORS_TEMPLATE_FILE = os.path.join(REPO_ROOT, TEMPLATES_DIR, CONTRIBUTORS_FILENAME)
@@ -29,9 +24,8 @@ def get_versions(repo):
     # Note: repo.heads does not work in Github workflows.
     branches = [branch.name.replace("origin/", "") for branch in repo.remotes.origin.refs if branch.name.startswith("origin/v")]
     versions = sorted(branches, key=parse_version, reverse=True)
-    return versions
-
-def extract_language_code(filename):
+    return version
+extract_language_code(filename):
     match = re.match(r"language-(.+)\.yml", filename)
     return match.group(1) if match else None
 
