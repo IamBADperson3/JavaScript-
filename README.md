@@ -1,4 +1,4 @@
-ok# JavaScript-
+# JavaScript-
 import os
 import re
 import yaml
